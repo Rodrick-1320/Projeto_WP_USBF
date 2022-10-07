@@ -1,0 +1,46 @@
+{
+  "name": "boilerplate-front",
+  "version": "1.0.0",
+  "description": "boilerplate front",
+  "main": "webpack.mix.js",
+  "scripts": {
+    "dev": "npx mix",
+    "watch": "npx mix watch",
+    "prod": "npx mix --production",
+    "prepare": "husky install",
+    "lint:js": "eslint --ext .js",
+    "lint": "yarn lint:js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "catskillet"
+  ],
+  "author": "Italo Costa <italo.costa@catskillet.com>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "axios": "^0.26.1",
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "2.3.0",
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "jquery-mask-plugin": "^1.14.16",
+    "jquery-validation": "^1.19.3",
+    "laravel-mix": "^6.0.43",
+    "prettier": "^2.6.2",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
+    "slick-carousel": "^1.8.1",
+    "webpack-livereload-plugin": "1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "animate.css": "^4.1.1",
+    "bootstrap": "5.1.3",
+    "jquery": "^3.6.0",
+    "yarn": "^1.22.19"
+  }
+}

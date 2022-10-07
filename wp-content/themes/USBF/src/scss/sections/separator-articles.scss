@@ -1,0 +1,150 @@
+.separator-articles{
+    background-color: #86c9fd;
+    list-style: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+    &__h2 {
+        color: white;
+        text-align: center;
+        font-family: 'Arial-BoldMT';
+        font-size: 45px; 
+        letter-spacing: 0.5px; 
+    }
+
+    &__wrapper-input{
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        display: flex;
+    }
+
+    &__search{
+        width: 244px;
+        height: 52px;
+
+        background-color: #4a82ae;
+        border: none;
+        color: white;
+        outline: none;
+
+        text-decoration: none;
+        font-size: 16px;
+
+        padding-left: 52px;
+    }
+
+    &__search::placeholder{
+        font-size: 16px;
+        color: white;
+        text-align: right;
+        margin-right: 80px;
+
+
+    }
+
+    &__x{
+        margin-right: 69px;
+
+        position: absolute;
+        right: 185px;
+        width: 37px;
+        height: 52px;
+        background-color: #4a82ae;
+        border: none;
+        top: 0;
+        display: none;
+    }
+    
+    form:valid &__x{
+        display: block;
+    }
+
+    &__lupinha{
+        right: 25px;
+        width: 47px;
+        height: 52px;
+        background-color: #4a82ae;
+        border: none;
+        top: -55px;
+    }
+}
+
+////////////
+
+@media (max-width: 360px) {
+    .separator-articles__form{
+        position: absolute;
+        top: 0;
+        height: 52px;
+        width: 300px;
+    }
+
+    .separator-articles__wrapper-input{
+        position: absolute;
+        right: 0;
+        top: 0px;
+    }
+
+    .separator-articles__search{
+        width: 320px;
+        height: 52px;
+
+        background-color: #4a82ae;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        outline: none;
+
+        text-decoration: none;
+        font-size: 16px;
+        padding-left: 45px;
+
+        margin-top: 25px;
+        position: relative;
+        right: -27px;
+    }
+
+    .separator-articles__search::placeholder{
+        font-size: 16px;
+        color: white;
+        text-align: right;
+        font-size: 16px;
+        text-align: left;
+        padding: 45px;
+    }
+
+    .separator-articles__lupinha{
+        top: 0;
+        margin-right: 35px;
+        margin-top: 25px;
+
+        width: 52px;
+        height: 52px;
+
+        background-color: #4a82ae;
+        border: none;
+        border-radius: 20px;
+        position: relative;
+        
+    }
+
+    .separator-articles__x {
+        margin-right: 294px;
+        top: 25px;
+
+        width: 52px;
+        height: 52px;
+        border-radius: 20px;
+        border: none;
+
+        // display: none;
+    }
+
+    form:valid &__x{
+        display: block;
+    }
+}

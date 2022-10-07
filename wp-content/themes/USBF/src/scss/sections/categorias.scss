@@ -1,0 +1,107 @@
+.col-lg-3{
+    padding-top: 62px;
+    margin-bottom: 40px;
+}
+
+.card{
+    border: 1px solid #e4e4e4;
+    margin-bottom: 40px;
+}
+
+.card{
+    &__cat{
+        padding: 1px 1px;
+        display: flex;
+        list-style: none;
+        text-decoration: none;
+        color: black;
+        flex-direction: column;
+        line-height: 30px;
+    }
+
+    &__card-header{
+        background-color: white;
+        font-size: 14px; 
+        color: #fc473d; 
+        text-transform: uppercase;
+        padding: 17px 15px;
+        border-bottom: 1px solid #e4e4e4;
+    }
+
+    &__card-header strong{
+        background-color: white;
+        font-size: 14px; 
+        color: #fc473d; 
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    &__card-body{
+        padding: 5px 18px;
+    }
+
+    &__card-body a{
+        text-decoration: none;
+    }
+
+    &__card-body a:hover{
+        color: black;
+    }
+
+    &__link{
+        color: black;
+    }
+}
+
+@media (max-width: 360px) {
+    
+    .card{
+        border: 1px solid #e4e4e4;
+        margin-bottom: 40px;
+    }
+    
+    .card{
+        &__cat{
+            padding: 1px 1px;
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+            color: black;
+            flex-direction: column;
+            line-height: 30px;
+        }
+    
+        &__card-header{
+            background-color: white;
+            font-size: 14px; 
+            color: #fc473d; 
+            text-transform: uppercase;
+            padding: 17px 15px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+    
+        &__card-header strong{
+            background-color: white;
+            font-size: 14px; 
+            color: #fc473d; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    
+        &__card-body{
+            padding: 5px 18px;
+        }
+    
+        &__card-body a{
+            text-decoration: none;
+        }
+    
+        &__card-body a:hover{
+            color: black;
+        }
+    
+        &__link{
+            color: black;
+        }
+    }
+}

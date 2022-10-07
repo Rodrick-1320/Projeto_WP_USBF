@@ -1,0 +1,119 @@
+.main-footer{
+    padding: 36px 0;
+    height: 230px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    background-color: #d6edfe;
+}
+
+.buttons{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+
+    &__facebook{
+        width: 38px;
+    }
+    &__insta{
+        width: 38px;
+    }
+    &__yt{
+        width: 53px;
+    }
+
+    &__link{
+        padding: 0 15px;
+    }
+
+    &__lista{
+        padding: 0 15px;
+    }
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer2{
+    background-color: #fc473d;
+
+    &__f2{
+        height: 118px;
+        text-align: center;
+        padding-top: 50px;
+        margin: 0;
+        font-weight: 300; 
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .main-footer{
+        padding: 36px 0;
+        height: 230px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        background-color: #d6edfe;
+    }
+    
+    .buttons{
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        cursor: pointer;
+        text-decoration: none;
+
+        &__facebook{
+            width: 38px;
+        }
+        &__insta{
+            width: 38px;
+        }
+        &__yt{
+            width: 53px;
+        }
+
+        &__link{
+            padding: 0 15px;
+        }
+
+        &__lista{
+            padding: 0 15px;
+        }
+    }
+    
+    .main-footer .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        &__img{
+            width: 90px;
+        }
+    }
+    
+    .footer2{
+        background-color: #fc473d;
+    
+        &__f2{
+            height: 118px;
+            text-align: center;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            margin: 0;
+            font-weight: 300; 
+            font-size: 15px;
+        }
+    }
+}

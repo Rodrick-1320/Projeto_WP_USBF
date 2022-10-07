@@ -1,0 +1,39 @@
+:root {
+  --red: #ed1b24;
+  --dark-black: #292929;
+  --medium-black: #515151;
+  --light-black: #8f8f8f;
+  --offwhite: #f4f4f4;
+  --purple: #781e77;
+  --orange: #fc8308;
+  --white: #ffffff;
+  --yellow: #ffd200;
+
+  --animate-duration: 1.5s;
+  --animate-delay: 1.5s;
+}
+
+body {
+  background-color: var(--white);
+  font: {
+    family: 'Roboto';
+    size: 14px;
+  }
+
+  &.logged-in {
+    margin-top: 32px;
+
+    header {
+      top: 32px;
+    }
+  }
+}
+
+img {
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

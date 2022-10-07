@@ -1,0 +1,20 @@
+// All Imports
+
+// Plugins
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "animate.css";
+
+// Components
+@import "fonts";
+@import "theme";
+@import "main/header";
+@import "main/footer";
+
+// Sections
+@import "sections/separator-articles";
+@import "sections/posts-list";
+@import "sections/pags";
+@import "sections/categorias";
+@import "sections/mais-lidos";
