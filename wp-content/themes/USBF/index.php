@@ -4,32 +4,28 @@
     <div class="separator-articles__container">
       <h2 class="separator-articles__h2">Artigos</h2>
 
-        <form action="" class="separator-articles__form" >
-          <div class="separator-articles__wrapper-input" id="wrapperInput">
-            
-            <div class="collapse collapse-horizontal" id="collapseWidthExample">
-              <button class="separator-articles__x" id="x" onclick="event.preventDefault(), eraseText()">
-                <img src="../src/images/x.png" alt="">
-              </button>
-              <input class="separator-articles__search" id="text" type="text" placeholder="BUSCAR" required>
-            </div>
-            <button id="btnToggleSearch" class="separator-articles__lupinha" type="submit" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" onchange="event.preventDefault(), eraseText()">
-              <span><img src="../src/images/img1.png" alt=""></span>
-            </button>
-          </div>
-        </form>
+      <?php  get_template_part( 'searchform' ); ?>
+      
     </div>
   </section>
 
-  <section class="main-content">
-    <div class="container">
-      <div class="row justify-content-between">
-        <div class="col-12 col-lg-6">
+<section class="main-content">
+  <div class="container">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-6">
 
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                    
+      <?php
+            $args = array( 
+              'posts_per_page' => 5, 
+              'post_type' => 'post', 
+            );
+            $my_custom_query = new WP_Query($args);
+        ?>
+
+        <?php if($my_custom_query->have_posts()): while($my_custom_query->have_posts()): $my_custom_query->the_post()?>
+
         <div class="bor">
-            <a href="" target="_blank" class="btn btn-white btn-animate">
+            <a href="<?php the_permalink() ?>" target="_blank" class="btn btn-white btn-animate">
               <section class="cards">
                 <div class="row">
                   <div class="col-12 col-lg-6">
@@ -47,81 +43,57 @@
               </section>
             </a>
           </div>
-        
-          <?php endwhile; ?>
-        
-          <?php else : ?>
+        <?php endwhile; endif; ?>
 
-            <p>SEM POSTS IRMÃO</p>
+        <section class="pags">
+          <div class="pag">
+            <?= custom_pagination($my_custom_query); ?>
+          </div>
+        </section>
 
-        <?php endif; ?>
-  
-          <section class="pags">
-            <div class="pag">
-              <button class="pag__ant disable" href="#" target="_blank">Anterior</button>
-              <button class="pag__num-active" href="#" target="_blank">1</button>
-              <button class="pag__num" href="#" target="_blank">2</button>
-              <button class="pag__num" href="#" target="_blank">3</button>
-              <button class="pag__prox btn-outline dark" href="#" target="_blank">Próxima</button>
-            </div>
-          </section>
-        </div>
-        <div class="col-lg-3">
-          <section class="categorias">
-            <div class="card w-100">
-              <div class="card__card-header"><strong>categorias</strong></div>
-              <div class="card__card-body text-secondary">
-                <ul class="card__cat">
-                  <li><a class="card__link" href="#" target="_blank">Blog</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Brasil</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Ceará</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Empreendedorismo</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Mundo</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Música</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Política</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Pop & arte</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Tecnologia</a></li>
-                  <li><a class="card__link" href="#" target="_blank">Turismo e viagem</a></li>
-                </ul>
-              </div>
-            </div>
-          </section>
-          <div class="card w-100">
-            <div class="card__card-header"><strong>mais lidos</strong></div>
-            <div class="card__card-body text-secondary">
-              <ul class="ml-ul">
-                <li>
-                  <a href="#" class="ml-ul__ml2" target="_blank"><span><strong class="ml-ul__strong">1</strong></span>
-                    <span>Instalação e primeiros passos com <br>
+      </div>
+
+      <div class="col-lg-3">
+
+        <?php render_my_post_categories(); ?>
+
+        <div class="card w-100">
+          <div class="card__card-header"><strong>mais lidos</strong></div>
+          <div class="card__card-body text-secondary">
+            <ul class="ml-ul">
+              <li>
+                <a href="#" class="ml-ul__ml2" target="_blank"><span><strong class="ml-ul__strong">1</strong></span>
+                  <span>Instalação e primeiros passos com <br>
                     wordpress, um cms poderoso</span></a>
-                </li>
-                <li>
-                  <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">2</strong></span>
-                    <span>Instalação e primeiros passos com <br>
+              </li>
+              <li>
+                <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">2</strong></span>
+                  <span>Instalação e primeiros passos com <br>
                     wordpress, um cms poderoso</span></a>
-                </li>
-                <li>
-                  <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">3</strong></span>
-                    <span>Instalação e primeiros passos com <br>
+              </li>
+              <li>
+                <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">3</strong></span>
+                  <span>Instalação e primeiros passos com <br>
                     wordpress, um cms poderoso</span></a>
-                </li>
-                <li>
-                  <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">4</strong></span>
-                    <span>Instalação e primeiros passos com <br>
+              </li>
+              <li>
+                <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">4</strong></span>
+                  <span>Instalação e primeiros passos com <br>
                     wordpress, um cms poderoso</span></a>
-                </li>
-                <li>
-                  <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">5</strong></span>
-                    <span>Instalação e primeiros passos com <br>
+              </li>
+              <li>
+                <a href="#" class="ml-ul__ml" target="_blank"><span><strong class="ml-ul__strong">5</strong></span>
+                  <span>Instalação e primeiros passos com <br>
                     wordpress, um cms poderoso</span></a>
-                </li>
-              </ul>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 </main>
 

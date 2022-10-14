@@ -41,4 +41,8 @@ x.addEventListener('click', () => {
 	eraseText()
 })
 
+btnToggleSearch.addEventListener('click', () => {
+	console.log('rudrigu');
+	eraseText()
+})
 

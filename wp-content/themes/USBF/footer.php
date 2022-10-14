@@ -1,12 +1,12 @@
 <footer class="main-footer">
   <div class="container">
     <a href="#" class="container__logoF">
-      <figure><img class="container__img" src="../src/images/img13.png" alt=""></figure>
+      <figure><img class="container__img" src="<?= get_template_directory_uri(); ?>/src/images/img13.png" alt=""></figure>
     </a>
     <ul class="buttons">
-      <li class="buttons__lista"><a href="#" target="_blank" class="buttons__link"><figure><img class="buttons__facebook" src="../src/images/img16.png" alt=""></figure></a></li>
-      <li class="buttons__lista"><a href="#" target="_blank" class="buttons__link"><figure><img class="buttons__insta" src="../src/images/img17.png" alt=""></figure></a></li>
-      <li class="buttons__lista"><a href="#" target="_blank" class="buttons__link"><figure><img class="buttons__yt" src="../src/images/img18.png" alt=""></figure></a></li>
+      <li class="buttons__lista"><a href="#" target="_blank" class="buttons__link"><figure><img class="buttons__facebook" src="<?= get_template_directory_uri(); ?>/src/images/img16.png" alt=""></figure></a></li>
+      <li class="buttons__lista"><a href="#" target="_blank" class="buttons__link"><figure><img class="buttons__insta" src="<?= get_template_directory_uri(); ?>/src/images/img17.png" alt=""></figure></a></li>
+      <li class="buttons__lista"><a href="#" target="_blank" class="buttons__link"><figure><img class="buttons__yt" src="<?= get_template_directory_uri(); ?>/src/images/img18.png" alt=""></figure></a></li>
     </ul>
   </div>
 </footer>

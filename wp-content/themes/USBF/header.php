@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta property="og:title" content="BOILERPLATE FRONTEND" />
@@ -27,7 +27,7 @@
   <header id="mainHeader" class="main-header">
     <div class="container">
         <nav class="main-nav">
-            <a class="logo" href="#" target="_blank">
+            <a class="logo" href="http://localhost/Projeto_wp_usbf/" target="_blank">
                 <figure><img src="<?= get_template_directory_uri(); ?>/src/images/img3.png" alt=""></figure>
             </a>
             <button id="btnToggleMenu" class="main-nav__hamburguer">
